@@ -10,11 +10,18 @@
 
 int main(int argc, const char * argv[]) {
   
-    NSString *userInput;
-    int userChoice;
+    
     
     NSLog(@"Select your operation: 1. Uppercase \n 2.Lowercase \n 3.Numerize \n 4.Canadianize \n 5.Respond \n 6.Despace it\n");
-    NSLog(@"Please input a string");
+    
+    char inputChars[255];
+    printf("Input a string");
+    fgets(inputChars, 255, stdin);
+    printf("Your string is %s\n", inputChars);
+    //convert array into nsstring object
+    NSString *inputString = [NSString stringWithUTF8String:inputChars];
+    
+    NSLog(@"Input was %@", inputString);
     
     
     return 0;
