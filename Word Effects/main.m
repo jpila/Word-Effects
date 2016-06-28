@@ -9,16 +9,24 @@
 #import <Foundation/Foundation.h>
 
 int main(int argc, const char * argv[]) {
-  
+    
     
     char inputChars[255];
     printf("Input a string");
     fgets(inputChars, 255, stdin);
     printf("Your string is %s\n", inputChars);
     //convert array into nsstring object
-    NSString *inputString = [NSString stringWithUTF8String:inputChars];
     
-    NSLog(@"Input was %@", inputString);
+    
+    char play;
+    printf("Do you want to run Word Effects? Y/N \n");
+    scanf(" %s", &play);
+    
+    while (play == 'y') {
+
+    
+        NSString *inputString = [NSString stringWithUTF8String:inputChars];
+        NSLog(@"Input was %@", inputString);
     
     
     int userOperation;
@@ -55,7 +63,10 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@",nospace);
     }
     
+        printf("Do you want to play again? (y/n) \n");
     
+        scanf(" %s", &play);
+    }
     
     
     
