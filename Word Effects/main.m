@@ -39,6 +39,12 @@ int main(int argc, const char * argv[]) {
         printf("You have Chosen Despace-it\n");
     }
     
+    NSString *uppercaseString = [inputString uppercaseString];
+    NSString *lowercaseString = [inputString lowercaseString];
+    NSString *canadianString = [inputString stringByAppendingString: @" Eh?"];
+    double  numberstring = [inputString doubleValue];
+                             
+    
     
     return 0;
     
