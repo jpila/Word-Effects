@@ -11,9 +11,6 @@
 int main(int argc, const char * argv[]) {
   
     
-    
-    NSLog(@"Select your operation: 1. Uppercase \n 2.Lowercase \n 3.Numerize \n 4.Canadianize \n 5.Respond \n 6.Despace it\n");
-    
     char inputChars[255];
     printf("Input a string");
     fgets(inputChars, 255, stdin);
@@ -24,5 +21,25 @@ int main(int argc, const char * argv[]) {
     NSLog(@"Input was %@", inputString);
     
     
+    int userOperation;
+    NSLog(@"Select your operation: 1. Uppercase \n 2.Lowercase \n 3.Numerize \n 4.Canadianize \n 5.Respond \n 6.Despace it\n");
+    scanf("%i", &userOperation);
+    
+    if (userOperation == 1){
+            printf("You have Chosen Uppercase\n");
+    }else if (userOperation==2){
+        printf("You have Chosen Lowercase\n");
+    }else if (userOperation==3){
+        printf("You have Chosen Numerize\n");
+    }else if (userOperation==4){
+        printf("You have Chosen Canadianize\n");
+    }else if (userOperation==5){
+        printf("You have Chosen Respond\n");
+    }else if (userOperation==6){
+        printf("You have Chosen Despace-it\n");
+    }
+    
+    
     return 0;
+    
 }
